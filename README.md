@@ -5,5 +5,5 @@
 | --- | --- |
 | Course | SEG 3503 |
 | Date | Summer 2023 |
-| Professor |    |
-| TA |   |
+| Professor |   Mohamed Ali Ibrahim |
+| TA | joseph abonasara |
