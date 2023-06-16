@@ -148,7 +148,6 @@ class DateTest {
       () -> new Date(1975, 6, -50)
     );
   }
-/////
 
   @Test
   void fevrier() {
@@ -166,7 +165,7 @@ class DateTest {
 
 
   @Test
-  void bis_non() {
+  void bis_non2() {
     Date today = new Date(2004, 2, 28);
     Date expectedTomorrow = new Date(2004, 2, 29);
     assertEquals(expectedTomorrow, today.nextDate());
