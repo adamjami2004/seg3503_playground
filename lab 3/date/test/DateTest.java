@@ -148,5 +148,80 @@ class DateTest {
       () -> new Date(1975, 6, -50)
     );
   }
+/////
+
+  @Test
+  void fevrier() {
+    Date today = new Date(2004, 2, 29);
+    Date expectedTomorrow = new Date(2004, 3, 1);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  @Test
+  void septembre() {
+    Date today = new Date(2000, 9, 29);
+    Date expectedTomorrow = new Date(2000, 9, 30);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+
+  @Test
+  void bis_non() {
+    Date today = new Date(2004, 2, 28);
+    Date expectedTomorrow = new Date(2004, 2, 29);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+  @Test
+  void same() {
+    Date today = new Date(2022, 1, 1);
+    Date today_2 = new Date(2022, 1, 2);
+    assertEquals(false, today.equals(today_2));
+  }
+
+  @Test
+  void bis_non() {
+    Date today = new Date(2005, 2, 28);
+    Date expectedTomorrow = new Date(2005, 3, 1);
+    assertEquals(expectedTomorrow, today.nextDate());
+  }
+
+  @Test
+  void is_bis() {
+    Date today = new Date(2000, 01, 05);
+    assertEquals(true, today.isLeapYear());
+  }
+  @Test
+  void year_diff() {
+    Date today = new Date(2000, 1, 1);
+    Date alsoToday = new Date(2001, 1, 1);
+    assertEquals(false, today.equals(alsoToday));
+  }
+
+
+  @Test
+  void equal() {
+    Date today = new Date(2005, 7, 2);
+    Date today_2 = new Date(2005, 7, 2);
+    assertEquals(true, today.equals(today_2));
+  }
+
+
+
+  @Test
+  void month_diff() {
+    Date today = new Date(2000, 1, 1);
+    Date alsoToday = new Date(2000, 2, 1);
+    assertEquals(false, today.equals(alsoToday));
+  }
+
+  @Test
+  void object_diff() {
+    Date today = new Date(2000, 1, 01);
+    Object obj = new Object();
+    assertEquals(false, today.equals(obj));
+  }
+
+
+
 
 }
